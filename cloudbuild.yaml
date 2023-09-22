@@ -3,9 +3,9 @@ steps:
   args: ['build', '-t', 'gcr.io/cloudside-academy/unitywindows-1:1', '.']
 
  # Authenticate with the container registry (in this case, GCR)
-  - name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud'
     args: ['auth', 'configure-docker', 'gcr.io']
 
   # Push the Docker image to the container registry
-  - name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/cloudside-academy/unitywindows-1:1']
